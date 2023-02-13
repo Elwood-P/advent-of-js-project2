@@ -3,24 +3,24 @@ import chevron from '../../assets/images/chevron.svg';
 function CartItem() {
   return (
     <li className="">
-       <div class="plate">
-        <img src="/assets/product-images/plate__fish-sticks-fries.png" alt="Fish Sticks and Fries" class="plate" />
-        <div class="quantity">1</div>
+       <div className="plate">
+        <img src="/assets/product-images/plate__fish-sticks-fries.png" alt="Fish Sticks and Fries" className="plate" />
+        <div className="quantity">1</div>
       </div>
-      <div class="content">
-        <p class="menu-item">Fish Sticks and Fries</p>
-        <p class="price">$6.34</p>
+      <div className="content">
+        <p className="menu-item">Fish Sticks and Fries</p>
+        <p className="price">$6.34</p>
       </div>
-      <div class="quantity__wrapper">
-        <button class="decrease" alt="decrease">
+      <div className="quantity__wrapper">
+        <button className="decrease" alt="decrease">
           <img src={chevron} />
         </button>
-        <div class="quantity">1</div>
-        <button class="increase">
+        <div className="quantity">1</div>
+        <button className="increase">
           <img src={chevron} alt="increase" />
         </button>
       </div>
-      <div class="subtotal">
+      <div className="subtotal">
         $6.34
       </div>
     </li>
