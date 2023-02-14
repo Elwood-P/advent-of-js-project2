@@ -1,4 +1,4 @@
-import Panel from '../ui/panel';
+import Panel from '../UI/panel';
 import menuItems from '../../data/menuItems';
 import MenuItem from './MenuItem';
 
