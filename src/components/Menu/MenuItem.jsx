@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import CartContext from '../../store/CartContext';
 
 function MenuItem({ menuItem }) {
-  const { cart, cartDispatch } = useContext(CartContext);
+  const { cartDispatch } = useContext(CartContext);
 
   return (
     <li>

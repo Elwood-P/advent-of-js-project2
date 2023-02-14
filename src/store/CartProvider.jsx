@@ -11,6 +11,13 @@ function cartReducer(cart, action) {
       return cart.map((cartItem) => (cartItem.name === action.item.name ? { ...cartItem, count: cartItem.count + 1 } : cartItem));
     }
   }
+  if (action.type === 'removeItem') {
+    if (action.item.count > 1) {
+      return cart.map((cartItem) => (cartItem.name === action.item.name ? { ...cartItem, count: cartItem.count - 1 } : cartItem));
+    } else {
+      return cart.filter((cartItem) => cartItem.name !== action.item.name);
+    }
+  }
 }
 
 function CartProvider({ children }) {
