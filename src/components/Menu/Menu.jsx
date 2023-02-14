@@ -1,4 +1,3 @@
-import CartContext from '../../store/CartContext';
 import Panel from '../ui/panel';
 import menuItems from '../../data/menuItems';
 import MenuItem from './MenuItem';

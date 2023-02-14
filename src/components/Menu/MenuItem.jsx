@@ -1,8 +1,10 @@
 import { useContext } from 'react';
 import CartContext from '../../store/CartContext';
+import check from '../../assets/images/check.svg';
 
 function MenuItem({ menuItem }) {
-  const { cartDispatch } = useContext(CartContext);
+  const { cart, cartDispatch } = useContext(CartContext);
+  const isInCart = cart.some((cartItem) => cartItem.name === menuItem.name);
 
   return (
     <li>
@@ -13,12 +15,13 @@ function MenuItem({ menuItem }) {
         <p className="menu-item">{menuItem.name}</p>
         <p className="price">£{menuItem.price / 100}</p>
         <button
-          className="add"
+          className={isInCart ? 'in-cart' : 'add'}
           onClick={() => {
             cartDispatch({ type: 'addItem', item: menuItem });
           }}
         >
-          Add to Cart
+          {isInCart && <img src={check} alt="Check mark" />}
+          {isInCart ? 'In Cart' : 'Add to Cart'}
         </button>
       </div>
     </li>
