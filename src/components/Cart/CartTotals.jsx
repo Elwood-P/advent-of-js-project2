@@ -5,7 +5,8 @@ function CartTotals() {
   const { cart } = useContext(CartContext);
 
   const subTotal = cart.length ? cart.reduce((runningTotal, cartItem) => runningTotal + cartItem.price * cartItem.count, 0) : 0;
-  const tax = subTotal * 0.2;
+  const taxRate = 0.0975;
+  const tax = subTotal * taxRate;
   const total = subTotal + tax;
 
   return (
