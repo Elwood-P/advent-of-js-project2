@@ -14,7 +14,7 @@ function CartItem({ cartItem }) {
       </div>
       <div className="content">
         <p className="menu-item">{name}</p>
-        <p className="price">£{price / 100}</p>
+        <p className="price">£{(price / 100).toFixed(2)}</p>
       </div>
       <div className="quantity__wrapper">
         <button
