@@ -14,7 +14,7 @@ function CartItem({ cartItem }) {
       </div>
       <div className="content">
         <p className="menu-item">{name}</p>
-        <p className="price">£{price}</p>
+        <p className="price">£{price / 100}</p>
       </div>
       <div className="quantity__wrapper">
         <button
@@ -37,7 +37,7 @@ function CartItem({ cartItem }) {
           <img src={chevron} alt="increase" />
         </button>
       </div>
-      <div className="subtotal">£{price * count}</div>
+      <div className="subtotal">£{((price / 100) * count).toFixed(2)}</div>
     </li>
   );
 }
